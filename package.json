@@ -2,7 +2,8 @@
   "name": "recipeapp",
   "version": "0.1.0",
   "private": true,
-    "dependencies": {
+  "homepage": "http://Abiola-Farounbi.github.io/D-recipes",
+  "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^5.11.6",
@@ -15,10 +16,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  
   },
   "eslintConfig": {
     "extends": [
