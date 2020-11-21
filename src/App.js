@@ -21,9 +21,7 @@ function App() {
 
  
   useEffect(() => {
-   getRecipes();
-
-  }, [query] );
+   getRecipes()},[query])// eslint-disable-line react-hooks/exhaustive-deps
 
 
   const getRecipes =async  () => {
@@ -31,8 +29,8 @@ function App() {
     const response=await fetch(`https://api.edamam.com/search?q=${query}&app_id=60b4e713&app_key=%208e394acbf18b45c0bdbcb0854bfef0a4`)
     
     const data = await response.json();
-  setRecipes(data.hits  )
-  console.log(data.hits)
+  setRecipes(data.hits)
+ 
  
    
 
