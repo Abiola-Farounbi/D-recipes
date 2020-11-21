@@ -11,9 +11,7 @@ import Recipe from './recipe';
 
 
 function App() {
-  // const APP_ID = ' 60b4e713' ;
-  // const APP_KEY='  8e394acbf18b45c0bdbcb0854bfef0a4  '	;
-  // const APP_KEY='ac9d8f069e424e57a4ecae57358bfaf0';
+  
 
   const [recipes,setRecipes]= useState([]);
   const [search,setSearch]=useState('');
@@ -23,7 +21,7 @@ function App() {
   useEffect(() => {
    getRecipes();
 
-  }, [query] );
+  }, [query] )// eslint-disable-line react-hooks/exhaustive-deps
 
 
   const getRecipes =async  () => {
